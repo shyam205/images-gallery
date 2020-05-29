@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+    <script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
+    <title>Image Gallery</title>
+</head>
+<body>
+    <h1>Image Gallery Design</h1>
+    <div class="gallery">
+        <div class="items">
+            <a href="images/vhar-interior1.jpg" data-lightbox="mygallery" data-title="1 image"><img src="images/vhar-interior1.jpg" alt="vhar associates portfolio"></a>
+           </div>
+           <div class="items">
+            <a href="images/vhar-interior2.jpg" data-lightbox="mygallery" data-title="2 image"><img src="images/vhar-interior2.jpg" alt="vhar associates portfolio"></a>
+           </div>
+           <div class="items">
+            <a href="images/vhar-interior3.jpg" data-lightbox="mygallery" data-title="3 image"><img src="images/vhar-interior3.jpg" alt="vhar associates portfolio"></a>
+            </div>
+            <div class="items">
+            <a href="images/vhar-interior4.jpg" data-lightbox="mygallery" data-title="4 image"><img src="images/vhar-interior4.jpg" alt="vhar associates portfolio"></a>
+            </div>
+            <div class="items">
+            <a href="images/vhar-interior5.jpg" data-lightbox="mygallery" data-title="5 image"><img src="images/vhar-interior5.jpg" alt="vhar associates portfolio"></a>
+            </div>
+            <div class="items">
+                <a href="images/vhar-interior6.jpg" data-lightbox="mygallery" data-title="6 image"><img src="images/vhar-interior6.jpg" alt="vhar associates portfolio"></a>
+            </div>
+            <div class="items">
+                <a href="images/vhar-interior7.jpg" data-lightbox="mygallery" data-title="7 image"><img src="images/vhar-interior7.jpg"alt="vhar associates portfolio"></a>
+            </div>
+            <div class="items">
+                <a href="images/vhar-interior8.jpg" data-lightbox="mygallery" data-title="8 image"><img src="images/vhar-interior8.jpg" alt="vhar associates portfolio"></a>
+            </div>
+            <div class="items">
+                <a href="images/vhar-interior9.jpg" data-lightbox="mygallery" data-title="9 image"><img src="images/vhar-interior9.jpg" alt="vhar associates portfolio"></a>
+            </div>
+            <div class="items">
+                <a href="images/vhar-interior10.jpg" data-lightbox="mygallery" data-title="10 image"><img src="images/vhar-interior10.jpg" alt="vhar associates portfolio"></a>
+            </div>
+            <div class="items">
+                <a href="images/vhar-interior11.jpg" data-lightbox="mygallery" data-title="11 image"><img src="images/vhar-interior11.jpg" alt="vhar associates portfolio"></a>
+               </div>
+               <div class="items">
+                <a href="images/vhar-interior12.jpg" data-lightbox="mygallery" data-title="12 image"><img src="images/vhar-interior12.jpg" alt="vhar associates portfolio"></a>
+               </div>
+               <div class="items">
+                <a href="images/vhar-interior13.jpg" data-lightbox="mygallery" data-title="13 image"><img src="images/vhar-interior13.jpg" alt="vhar associates portfolio"></a>
+                </div>
+                <div class="items">
+                <a href="images/vhar-interior14.jpg" data-lightbox="mygallery" data-title="14 image"><img src="images/vhar-interior14.jpg" alt="vhar associates portfolio"></a>
+                </div>
+                <div class="items">
+                <a href="images/vhar-interior15.jpg" data-lightbox="mygallery" data-title="15 image"><img src="images/vhar-interior15.jpg" alt="vhar associates portfolio"></a>
+                </div>
+                <div class="items">
+                    <a href="images/vhar-interior16.jpg" data-lightbox="mygallery" data-title="16 image"><img src="images/vhar-interior16.jpg" alt="vhar associates portfolio"></a>
+                </div>
+                <div class="items">
+                    <a href="images/vhar-interior17.jpg" data-lightbox="mygallery" data-title="17 image"><img src="images/vhar-interior17.jpg"alt="vhar associates portfolio"></a>
+                </div>
+                <div class="items">
+                    <a href="images/vhar-interior18.jpg" data-lightbox="mygallery" data-title="18 image"><img src="images/vhar-interior18.jpg" alt="vhar associates portfolio"></a>
+                </div>
+                <div class="items">
+                    <a href="images/vhar-interior19.jpg" data-lightbox="mygallery" data-title="19 image"><img src="images/vhar-interior19.jpg" alt="vhar associates portfolio"></a>
+                </div>
+                <div class="items">
+                    <a href="images/vhar-interior20.jpg" data-lightbox="mygallery" data-title="20 image"><img src="images/vhar-interior20.jpg" alt="vhar associates portfolio"></a>
+                </div>
+                <div class="items">
+                    <a href="images/vhar-interior21.jpg" data-lightbox="mygallery" data-title="21 image"><img src="images/vhar-interior21.jpg" alt="vhar associates portfolio"></a>
+                </div>
+
+    </div>
+   <div class="read-more">
+      <a href="#" id="loadmore" class="btn-load">Load more</a>
+   </div>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".items").slice(0,4).show();
+
+            $("#loadmore").on('click', function (e) {
+                e.preventDefault();
+
+               $(".items:hidden").slice(0,2).slideDown();
+               if($(".items:hidden").length == 0){
+                   $("#load").fadeOut('slow');
+               }
+               $('html,body').animate({
+                   scrollTop:$(this).offset().top
+               }, 1500)
+            })
+        });
+    </script>
+</body>
+</html>

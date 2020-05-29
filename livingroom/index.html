@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+    <script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
+    <title>Image Gallery</title>
+</head>
+<body>
+    <h1>Image Gallery Design</h1>
+    <div class="gallery">
+        <div class="items">
+        <a href="images/vhar-livingroom1.jpg" data-lightbox="mygallery" data-title="1 image"><img src="images/vhar-livingroom1.jpg" alt="vhar associates portfolio"></a>
+       </div>
+       <div class="items">
+        <a href="images/vhar-livingroom2.jpg" data-lightbox="mygallery" data-title="2 image"><img src="images/vhar-livingroom2.jpg" alt="vhar associates portfolio"></a>
+       </div>
+       <div class="items">
+        <a href="images/vhar-livingroom3.jpg" data-lightbox="mygallery" data-title="3 image"><img src="images/vhar-livingroom3.jpg" alt="vhar associates portfolio"></a>
+        </div>
+        <div class="items">
+        <a href="images/vhar-livingroom4.jpg" data-lightbox="mygallery" data-title="4 image"><img src="images/vhar-livingroom4.jpg" alt="vhar associates portfolio"></a>
+        </div>
+        <div class="items">
+        <a href="images/vhar-livingroom5.jpg" data-lightbox="mygallery" data-title="5 image"><img src="images/vhar-livingroom5.jpg" alt="vhar associates portfolio"></a>
+        </div>
+        <div class="items">
+            <a href="images/vhar-livingroom6.jpg" data-lightbox="mygallery" data-title="6 image"><img src="images/vhar-livingroom6.jpg" alt="vhar associates portfolio"></a>
+        </div>
+        <div class="items">
+            <a href="images/vhar-livingroom7.jpg" data-lightbox="mygallery" data-title="7 image"><img src="images/vhar-livingroom7.jpg" alt="vhar associates portfolio"></a>
+        </div>
+        <div class="items">
+            <a href="images/vhar-livingroom8.jpg" data-lightbox="mygallery" data-title="8 image"><img src="images/vhar-livingroom8.jpg" alt="vhar associates portfolio"></a>
+        </div>
+        <div class="items">
+            <a href="images/vhar-livingroom9.jpg" data-lightbox="mygallery" data-title="9 image"><img src="images/vhar-livingroom9.jpg" alt="vhar associates portfolio"></a>
+        </div>
+        <div class="items">
+            <a href="images/vhar-livingroom10.jpg" data-lightbox="mygallery" data-title="10 image"><img src="images/vhar-livingroom10.jpg" alt="vhar associates portfolio"></a>
+        </div>
+       
+
+    </div>
+   <div class="read-more">
+      <a href="#" id="loadmore" class="btn-load">Load more</a>
+   </div>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".items").slice(0,4).show();
+
+            $("#loadmore").on('click', function (e) {
+                e.preventDefault();
+
+               $(".items:hidden").slice(0,2).slideDown();
+               if($(".items:hidden").length == 0){
+                   $("#load").fadeOut('slow');
+               }
+               $('html,body').animate({
+                   scrollTop:$(this).offset().top
+               }, 1500)
+            })
+        });
+    </script>
+</body>
+</html>
